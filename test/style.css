@@ -1,0 +1,185 @@
+/* 03 Choose some colors and a Font. */
+/* General Styles */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #473144; /* Dark color */
+    margin: 0;
+    padding: 0;
+    font-size: 16px; /* Base font size */
+    line-height: 1.5;
+    background-color: #fff; /* Assuming a white background */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', Impact, serif; /* Headline font */
+    margin-top: 0; /* Reset default top margin for headings */
+}
+
+a {
+    color: #AF1B3F; /* Red color for links */
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+    color: #EFC69B; /* Gold color on hover/focus */
+}
+
+/* 07 More Accessibility - Skip to main content link */
+.skiptocontent a {
+    position: absolute;
+    top: -40px; /* Initially hidden off-screen */
+    left: 0;
+    background: #EFC69B; /* Gold color */
+    color: #473144; /* Dark color */
+    padding: 8px 15px;
+    z-index: 1000; /* Ensure it's on top of other elements */
+    text-decoration: none;
+    border: 1px solid #473144;
+}
+
+.skiptocontent a:focus {
+    top: 0; /* Bring it into view on focus */
+}
+
+/* 05 Finish styling the header */
+header {
+    /* Acts as a container for the main title and navigation */
+}
+
+header h1 {
+    font-size: 2.8em; /* Increased size for the page title */
+    text-align: center; /* Center the title */
+    padding: 25px 0; /* Add padding to match mockup spacing */
+    margin-bottom: 0; 
+    color: #473144; /* Dark color for main page title, as per mockup */
+}
+
+nav {
+    border-top: 1px solid #EFC69B; /* Gold color line above navigation */
+    border-bottom: 1px solid #EFC69B; /* Gold color line below navigation */
+    padding: 10px 0; /* Vertical padding for the nav bar */
+    max-width: 960px; /* Set a max-width for the navigation content area */
+    margin: 0 auto 20px auto; /* Center the nav block and add bottom margin */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullets from the navigation list */
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto auto; /* Columns adjust to content size */
+    gap: 20px; /* Space between navigation items */
+    justify-content: end; /* Align grid items (links) to the right side of the nav container */
+}
+
+nav ul li a {
+    padding: 8px 12px; /* Padding for clickable area of links */
+    font-size: 1.1em; /* Slightly larger font size for navigation links */
+    display: block; /* Make the entire area of the list item clickable */
+    color: #473144; /* Dark color for nav links, as per mockup */
+    font-weight: bold; /* Make nav links bold as they appear in mockup */
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    color: #EFC69B; /* Gold color on hover/focus */
+    text-decoration: none; /* Remove underline on hover for a cleaner look if desired */
+}
+
+/* 04 Add the CSS for the layout. */
+/* Main body grid: articles on left, filters on right */
+.main-layout-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Allocate more space to articles */
+    gap: 30px; /* Space between the articles column and the filters column */
+    padding: 20px; /* Padding around the main content area */
+    max-width: 1200px; /* Max width for the overall main content */
+    margin: 0 auto; /* Center the main content area on the page */
+}
+
+.articles-section {
+    /* This div groups all articles */
+}
+
+.filters-section {
+    border: 1px solid #EFC69B; /* Gold color border for the filter box */
+    padding: 20px;
+    background-color: #fdfbf9; /* A very light background for the filter box */
+    height: fit-content; /* Ensures the border wraps the content snugly */
+}
+
+.filters-section p {
+    margin-top: 0; /* Remove default top margin from the placeholder paragraph */
+}
+
+/* Article internal grid: details on left, content on right */
+.book-review {
+    margin-bottom: 40px; /* Space between individual articles */
+}
+
+.article-layout-grid {
+    display: grid;
+    grid-template-columns: 120px 1fr; /* Fixed width for meta details, rest for content */
+    gap: 25px; /* Space between the meta column and the content column */
+    padding-bottom: 20px; /* Padding at the bottom of the article grid */
+    border-bottom: 1px dashed #EFC69B; /* Gold dashed line separating articles */
+}
+
+.book-review:last-child .article-layout-grid {
+    border-bottom: none; /* Remove border from the very last article */
+}
+
+.article-meta {
+    font-size: 0.9em; /* Slightly smaller font for meta details */
+}
+
+.article-meta time {
+    display: block; /* Make time take its own line */
+    font-weight: bold; /* Make the date stand out */
+    font-size: 1.1em; /* Larger font size for the date */
+    margin-bottom: 10px;
+    color: #473144; /* Dark color for the date */
+}
+
+.article-meta p {
+    margin: 8px 0; /* Spacing for age, genre, rating paragraphs */
+}
+.article-meta .rating {
+    font-weight: bold; /* Make rating stand out */
+    /* color: #EFC69B; Consider this if using star icons later */
+}
+
+.article-body h2 { /* Article Titles */
+    font-size: 1.7em; /* Size for individual article titles */
+    margin-bottom: 15px;
+    color: #AF1B3F; /* Red color for article titles */
+}
+
+.image-placeholder {
+    width: 150px; 
+    height: 220px;
+    border: 1px solid #cccccc; /* Light grey border for the placeholder */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em; /* Size of the 'X' character */
+    color: #cccccc; /* Light grey 'X' */
+    margin: 0 0 15px 0; /* Margin below the placeholder */
+    background-color: #f0f0f0; /* Slight background for the placeholder */
+}
+
+.article-body p { /* Article description text */
+    font-size: 1em;
+    line-height: 1.6;
+    color: #473144; /* Dark color for readability */
+}
+
+/* Footer Styles (Optional) */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #EFC69B; /* Gold color line above footer */
+    font-size: 0.9em;
+    color: #473144;
+}
