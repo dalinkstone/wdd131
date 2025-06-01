@@ -15,6 +15,8 @@ h1 {
 
 h2 {
     color: #AF1B3F;
+    margin-top: 0;
+    font-family: Lora, Impact, serif;
 }
 
 .skiptocontent a {
@@ -61,24 +63,43 @@ main {
     grid-template-columns: 3fr 1fr; 
     gap: 30px; 
     padding: 20px; 
-    max-width: 100%; 
+    max-width: 1600px; 
     margin: 0 auto; 
     color: #473144;
 }
 
 .article-layout {
     display: grid;
-    grid-template-columns: 120px 1fr; 
+    grid-template-columns: 225px 1fr; 
     gap: 25px; 
     padding-bottom: 20px; 
 }
 
+.date {
+    font-size: 1.25em;
+}
+
+.article-details {
+    text-align: right;
+    line-height: .8em;
+    border-right: 1px solid #EFC69B;
+    padding: 0 15px;
+    width: 200px;
+}
 
 .article-content {
-    margin-left: 100px;
+    margin-bottom: 40px;
+    margin: 0 auto;
 }
 
 img {
-    margin-left: 35px;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    margin: 0 auto;
 }
 
+.filter {
+    border: 1px solid #EFC69B;
+    text-align: left;
+}
