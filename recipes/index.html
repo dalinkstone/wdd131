@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="recipes.css">
     <title>Recipes</title>
     <link rel="icon" type="image/png" href="images/recipe-book.png">
-    <script src="main.js" defer></script>
+    <script src="main.js" type="module" defer></script>
 </head>
 <body>
     <header>
@@ -32,13 +32,16 @@
                 <div class="search-bar">
                     <label for="searchbar"></label>
                     <input id="searchbar" type="search" name="searchbar" value="Find a recipe"/>
+                    <button id="search-button" type="button">
                     <img src="images/search.svg" alt="This is a picture of a mangifying glass in the search bar, implying that you use the search bar to find recipes">
+                    </button>
                 </div>
             </form>
         </nav>
         
         <div id="border-separator"></div>
         
+        <div class="recipes">
         <div class="recipe-card">
             <img src="./images/apple-crisp.jpg" alt="This is a picture of an apple crisp pie dessert where the pie is filled with apple slices and apple filling">
             <div class="recipe-content">
@@ -53,6 +56,7 @@
             </span> 
             <p id="recipe-description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
             </div>
+        </div>
         </div>
 
     </main>
