@@ -31,38 +31,49 @@
         <span class="line"></span>
     </button>
 
-    <nav id="main-nav"> <a href="index.html">Home</a>
+    <nav id="main-nav">
+        <a href="index.html">Home</a>
         <a href="contactus.html">Contact Us</a>
     </nav>
 
     <main>
-        <section class="blurb-section">
-            <h2>Your Projects Made By Us</h2>
-            <p>We specialize in Data, Web development, and AI Apps. Let us take the idea from your frontal cortex and bring it to life.</p>
-        </section>
+        <section id="contact-section">
+            <h2 class="page-heading">Have a project in mind? Let's talk about it.</h2>
+            
+            <div class="contact-layout">
+                <div class="suggestion-box">
+                    <h4>Email us about:</h4>
+                    <ul>
+                        <li>What you need help with</li>
+                        <li>What's on your mind</li>
+                        <li>Potential Projects</li>
+                        <li>Consulting on current work</li>
+                        <li>Any inquiries</li>
+                    </ul>
+                </div>
 
-        <section id="projects">
-            <div class="project-grid">
-                <a href="https://github.com/dalinkstone/wdd131" target="_blank" class="project-card">
-                    <h3>Web Development</h3>
-                    <p>A collection of foundational projects demonstrating core concepts in HTML, CSS, and JavaScript.</p>
-                </a>
-
-                <a href="https://github.com/dalinkstone/cse210" target="_blank" class="project-card">
-                    <h3>Object Programming</h3>
-                    <p>A collection of console applications built to demonstrate core object-oriented programming (OOP) principles using C#.</p>
-                </a>
-
-                <a href="https://huggingface.co/spaces/dalinstone/transcriber-elevenlabs-gemini" target="_blank" class="project-card">
-                    <h3>AI Transcriber</h3>
-                    <p>Leverages Google's Gemini model to provide accurate audio-to-text transcriptions and integrates ElevenLabs for high-quality voice synthesis.</p>
-                </a>
+                <div class="form-container">
+                    <form id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required minlength="20"></textarea>
+                        </div>
+                        <button type="submit" class="keyboard-key">Send</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-
     </footer>
 
 </body>
